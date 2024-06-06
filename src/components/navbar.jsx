@@ -13,6 +13,11 @@ import { BrowserRouter as Router, Routes, Route, Link } from "react-router-dom";
 import Error from "./Error";
 import GrievanceForm from "./GrivenceForm";
 import LoginPage from "./loginpage";
+import home from "./home";
+import AboutUs from "./aboutus";
+// import ContactComponent from "./contact";
+// import NewsComponent from "./news"
+// import LoginForm from "./loginpage";
 // import Footer from "./footer";
 // import AdminLoginPage from "./LoginAdmin";
 // import AdminPage from "./adminpage";
@@ -21,13 +26,13 @@ function Navbar() {
   return (
     <>
       <Router>
-        <div className="container">
+        <div className="container" style={{ backgroundColor: "#FBF6EE" }}>
           <nav
             className="navbar navbar-expand-lg navbar-dark"
             style={{ backgroundColor: "#5375e2" }}
           >
             <div className="container-fluid">
-              <Link className="navbar-brand text-white" to="/">
+              <Link className="navbar-brand text-white" to="/home">
                 Home Page
               </Link>{" "}
               <button
@@ -65,9 +70,18 @@ function Navbar() {
                     <Link
                       className="nav-link text-white"
                       aria-current="page"
-                      to="/#"
+                      to="/aboutus"
                     >
                       About Us
+                    </Link>
+                  </li>
+                  <li className="nav-item">
+                    <Link
+                      className="nav-link text-white"
+                      aria-current="page"
+                      to="/contactus"
+                    >
+                      Contact Us 
                     </Link>
                   </li>
                 </ul>
@@ -76,17 +90,17 @@ function Navbar() {
           </nav>
 
           <Routes>
-            <Route path="" Component={GrievanceForm}></Route>
-            {/* <Route path="home" Component={HomePage}></Route> */}
+            <Route path="" Component={home}></Route>
+            <Route path="home" Component={home}></Route>
             {/* <Route path="courses" Component={CoursesPage}></Route> */}
             <Route path="Grivance" Component={GrievanceForm}></Route>
             {/* <Route path="signup" Component={SignUpPage}></Route> */}
             <Route path="login" Component={LoginPage}></Route>
-            {/* <Route path="contactus" Component={ContactUs}></Route> */}
+            {/* <Route path="contactus" Component={ContactComponent}></Route> */}
             {/* <Route path="feedback" Component={FeedbackPage}></Route> */}
             {/* <Route path="adminlogin" Component={AdminLoginPage}></Route> */}
             {/* <Route path="admin" Component={AdminPage}></Route> */}
-            {/* <Route path="aboutus" Component={AboutUs}></Route> */}
+            <Route path="aboutus" Component={AboutUs}></Route>
             <Route path="*" Component={Error}></Route>
           </Routes>
         </div>

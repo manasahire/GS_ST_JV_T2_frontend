@@ -8,6 +8,8 @@ function GrievanceForm() {
     email: "",
     mobile: "",
     address: "",
+    villageName: "",
+    tehsilName: "",
     aadharNo: "",
     grievance: "",
   });
@@ -16,10 +18,10 @@ function GrievanceForm() {
 
   const handleChange = (event) => {
     const { name, value } = event.target;
-    const numericValue = name === "mobile" ? value.replace(/\D/g, "") : value;
+    const mobilenumber = name === "mobile" ? value.replace(/\D/g, "") : value;
     const adharnumber = name === "aadharNo" ? value.replace(/\D/g, "") : value;
 
-    setFormData({ ...formData, [name]: numericValue, [name]: adharnumber });
+    setFormData({ ...formData, [name]: mobilenumber, [name]: adharnumber });
   };
 
   const handleSubmit = (e) => {
@@ -36,6 +38,8 @@ function GrievanceForm() {
       email: "",
       mobile: "",
       address: "",
+      villageName: "",
+      tehsilName: "",
       aadharNo: "",
       grievance: "",
     });
@@ -47,36 +51,38 @@ function GrievanceForm() {
         <Alert variant="success">Grievance submitted successfully!</Alert>
       )}
       <Form onSubmit={handleSubmit}>
-        <Form.Group controlId="formFullName">
+        <Form.Group controlId="formFullName" style={{ marginBottom: "20px" }}>
           <Form.Label>Full Name</Form.Label>
           <Form.Control
             type="text"
             name="fullName"
+            placeholder="Enter your Name "
             value={formData.fullName}
             onChange={handleChange}
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="formEmail">
+        <Form.Group controlId="formEmail" style={{ marginBottom: "20px" }}>
           <Form.Label>Email</Form.Label>
           <Form.Control
             type="email"
-            id="email"
             name="email"
-            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}$"
+            pattern="[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\.[a-zA-Z]{2,}"
             placeholder=" e.g abc@gmail.com"
             value={formData.email}
             onChange={handleChange}
             required
           />
+          <Form.Text className="text-muted">
+            We'll never share your email with anyone else.
+          </Form.Text>
         </Form.Group>
 
-        <Form.Group controlId="formMobile">
+        <Form.Group controlId="formMobile" style={{ marginBottom: "20px" }}>
           <Form.Label>Mobile</Form.Label>
           <Form.Control
             type="tel"
-            id="mobile"
             pattern="[6-9][0-9]{9}"
             maxLength="10"
             placeholder="xxxxx xxxxx "
@@ -85,53 +91,51 @@ function GrievanceForm() {
             onChange={handleChange}
             required
           />
+          <Form.Text className="text-muted">
+            mobile number should start with number ranging from 6-9 only.
+          </Form.Text>
         </Form.Group>
 
-        <Form.Group controlId="formHouseNo">
-          <Form.Label>House No</Form.Label>
+        <Form.Group controlId="formAddress" style={{ marginBottom: "20px" }}>
+          <Form.Label>address </Form.Label>
           <Form.Control
             type="text"
-            name="houseNo"
+            name="address"
+            placeholder="Enter your Address"
             value={formData.houseNo}
             onChange={handleChange}
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="formVillageName">
+        <Form.Group
+          controlId="formVillageName"
+          style={{ marginBottom: "20px" }}
+        >
           <Form.Label>Village Name</Form.Label>
           <Form.Control
             type="text"
             name="villageName"
+            placeholder="Enter your Village name "
             value={formData.villageName}
             onChange={handleChange}
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="formPinCode">
-          <Form.Label>Pin Code</Form.Label>
-          <Form.Control
-            type="text"
-            name="pinCode"
-            value={formData.pinCode}
-            onChange={handleChange}
-            required
-          />
-        </Form.Group>
-
-        <Form.Group controlId="formTehsilName">
+        <Form.Group controlId="formTehsilName" style={{ marginBottom: "20px" }}>
           <Form.Label>Tehsil Name</Form.Label>
           <Form.Control
             type="text"
             name="tehsilName"
+            placeholder="Enter your TehsilName"
             value={formData.tehsilName}
             onChange={handleChange}
             required
           />
         </Form.Group>
 
-        <Form.Group controlId="formAadharNo">
+        <Form.Group controlId="formAadharNo" style={{ marginBottom: "20px" }}>
           <Form.Label>Aadhar Number</Form.Label>
           <Form.Control
             type="text"
@@ -145,20 +149,22 @@ function GrievanceForm() {
           />
         </Form.Group>
 
-        <Form.Group controlId="formGrievance">
+        <Form.Group controlId="formGrievance" style={{ marginBottom: "20px" }}>
           <Form.Label>Enter your Problem here</Form.Label>
           <Form.Control
             as="textarea"
             name="grievance"
+            placeholder="Enter your problem here "
             value={formData.grievance}
             onChange={handleChange}
             required
           />
         </Form.Group>
-
-        <Button variant="primary" type="submit">
-          Submit
-        </Button>
+        <div style={{ textAlign: "center" }}>
+          <Button variant="primary" type="submit">
+            Submit
+          </Button>
+        </div>
       </Form>
     </div>
   );

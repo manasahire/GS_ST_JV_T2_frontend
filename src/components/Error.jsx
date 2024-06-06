@@ -1,11 +1,16 @@
-import React from 'react'
+// src/ErrorPage.js
+import React from 'react';
+import './Error.css';
 
-function Error() {
+function ErrorPage() {
   return (
-    <div>
-      you r not permited to view it 
+    <div className="error-page-container">
+      <img src='notAllow.jpeg' alt='<h1>404</h1>' />
+      {/* <h1>404</h1> */}
+      <p>Page Not Found</p>
+      <a href="/home" className="btn">Go Home</a>
     </div>
-  )
+  );
 }
 
-export default Error
+export default ErrorPage;
