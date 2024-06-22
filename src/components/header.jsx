@@ -1,24 +1,30 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
+import './header.css'; // Assuming you will add custom CSS in this file
 
 function Header() {
   return (
     <header>
       <Container fluid>
-        <Row>
-          <Col md={2} style={{ backgroundColor: "#FFB534", padding: "20px" }}>
-            <img className="d-block w-100" src="ZPlogo.png" alt="ZP-LOGO" height={"150px"} width={"150px"} />
-          </Col>
-          <Col md={8} style={{ backgroundColor: "#FFB534 ", padding: "20px" }}>
-            <h1> Rural Development & Panchayat Raj Department</h1>
-            <h2>Government Of Maharashtra </h2>
-          </Col>
-          <Col md={2} style={{ backgroundColor: "#FFB534 ", padding: "20px" }}>
+        <Row className="align-items-center" style={{ backgroundColor: "#FFB534" }}>
+          <Col md={2} xs={3} style={{ padding: "20px" }}>
             <img
-              className="d-block w-100"
+              className="img-fluid"
+              src="ZPlogo.png"
+              alt="ZP-LOGO"
+              id="zp-logo"
+            />
+          </Col>
+          <Col md={8} xs={6} style={{ padding: "20px" }}>
+            <h1 className="header-title">Rural Development & Panchayat Raj Department</h1>
+            <h2 className="header-subtitle">Government Of Maharashtra</h2>
+          </Col>
+          <Col md={2} xs={3} style={{ padding: "20px" }}>
+            <img
+              className="img-fluid"
               src="EmbluLogo.png"
-              alt="Indian Emblum "
-              height={"150px"} width={"70px"}
+              alt="Indian Emblum"
+              id="emblem-logo"
             />
           </Col>
         </Row>

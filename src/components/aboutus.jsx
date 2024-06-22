@@ -6,10 +6,11 @@ function AboutUs() {
     <Container className="about-section mt-5">
       <MarqueeComponent />
       <h2 className="text-center">About Us</h2>
-      <p>
+      
         <h3> Zilla Parishad </h3>
         <br />
         <h5>73rd Amendment of Constitution.</h5>
+      <p>
         As per the Directives of the Panchayat Raj Law, The constitution was
         amended for the 73rd time on 20thApril, 1993. According to Article
         243(J), the Panchayat Raj Sansthan has been given the authority to levy
@@ -24,6 +25,7 @@ function AboutUs() {
       <h3 className="text-center">Location</h3>
       <div>
         <iframe
+        title="location of zp "
           src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d1033.2383359972746!2d73.78218110019144!3d19.997295145147913!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3bddeb0887c6d8c9%3A0x2f841263dcca6464!2sZilla%20Parishad%20Nashik!5e0!3m2!1sen!2sin!4v1717674223683!5m2!1sen!2sin"
           width="100%"
           height="550"
@@ -57,14 +59,14 @@ function AboutUs() {
                     borderRadius: "50%",
                   }}
                 />
-                <h3 className="mt-3"> CEO -Ashima Mittal </h3>
+                <h3 className="mt-3"> CEO </h3>
                 <p>
-                  Ashima Mittal was born on the 30th of June 1992 and is
+                  She was born on the 30th of June 1992 and is
                   currently 28 years of age. Her posting is currently in
                   Maharashtra. She hails from the capital city of Rajasthan,
                   Jaipur. Ashima has attended IIT Mumbai to do her Engineering
                   and had also taken up a job before attempting the UPSC exam.
-                  Read on to learn more about Ashima Mittal IAS.
+                  Read on to learn more about her IAS.
                 </p>
               </div>
             </div>
@@ -73,7 +75,7 @@ function AboutUs() {
             <div className="card">
               <div className="card-body text-center">
                 <img
-                  src="SP.jpeg"
+                  src="sp.png"
                   alt="Mark"
                   style={{
                     width: "245px",
@@ -83,9 +85,9 @@ function AboutUs() {
                     borderRadius: "50%",
                   }}
                 />
-                <h3 className="mt-3"> DGP- VISHWAS NANGRE PATIL </h3>
+                <h3 className="mt-3"> DGP  </h3>
                 <p>
-                  Vishwas Narayan Nangare Patil, IPS, PPMG is an Indian Police
+                  Sir is IPS, PPMG is an Indian Police
                   Service officer. He serves as the Additional Director General
                   of Police in the Anti-corruption Bureau, Maharashtra.
                   Previously he was Joint Commissioner of Police, Mumbai.

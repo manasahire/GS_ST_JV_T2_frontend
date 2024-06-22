@@ -1,0 +1,122 @@
+/* Ensure full height for centering */
+html, body {
+  height: 100%;
+  margin: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #f4f4f4;
+ 
+}
+
+/* Container styling */
+.grievance-form-container {
+  max-width: 600px;
+  width: 100%; /* Ensures the form container doesn't exceed the viewport width */
+  margin: 20px;
+  padding: 20px;
+  border: 1px solid #ccc;
+  border-radius: 10px;
+  background-color: #f9f9f9;
+  
+}
+.form-title {
+  margin-top:20px;
+  margin-bottom: 20px;
+  font-size: 24px;
+  font-weight: bold;
+  text-align: center; /* Ensure title is centered */
+}
+
+/* Form styling */
+.grievance-form-container form {
+  display: flex;
+  flex-direction: column;
+}
+
+.grievance-form-container form .form-group {
+  margin-bottom: 15px;
+}
+
+.grievance-form-container form button {
+  align-self: center;
+}
+.grievance-form-container form button:hover {
+  background-color: green; /* Change background color on hover */
+  color: white; /* Change text color on hover */
+}
+
+/* Additional styles for specific elements */
+.form-text {
+  margin-bottom: 10px;
+}
+
+.alert {
+  margin-bottom: 20px;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+  
