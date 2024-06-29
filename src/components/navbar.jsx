@@ -8,7 +8,6 @@ import LoginPage from "./loginpage";
 import home from "./home";
 import AboutUs from "./aboutus";
 import mainemp from '../EMP/mainemp'
-// import ContactForm from "./contactUs";
 import mainprm from "../PRM/mainprm";
 import mainhod from "../HOD/mainhod";
 
@@ -66,15 +65,6 @@ function Navbar() {
                       About Us
                     </Link>
                   </li>
-                  {/* <li className="nav-item">
-                    <Link
-                      className="nav-link text-white"
-                      aria-current="page"
-                      to="/ContactForm"
-                    >
-                      Contact Us 
-                    </Link>
-                  </li> */}
                 </ul>
               </div>
             </div>
@@ -87,9 +77,12 @@ function Navbar() {
             <Route path="login" Component={LoginPage}></Route>
             <Route path="aboutus" Component={AboutUs}></Route>
             <Route path="*" Component={Error}></Route>
-            <Route path="mainemp" Component={mainemp}></Route>
+            {/* <Route path="mainemp" Component={mainemp}></Route>
             <Route path="mainprm" Component={mainprm}></Route>
-            <Route path="mainhod" Component={mainhod}></Route>
+            <Route path="mainhod" Component={mainhod}></Route> */}
+            <Route path="mainemp/*" Component={mainemp}></Route>
+            <Route path="mainprm/*" Component={mainprm}></Route>
+            <Route path="mainhod/*" Component={mainhod}></Route>
             {/* <Route path="ContactForm" Component={ContactForm}></Route> */}
 
             

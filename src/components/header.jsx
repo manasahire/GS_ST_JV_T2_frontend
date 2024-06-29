@@ -1,10 +1,10 @@
 import React from "react";
 import { Container, Row, Col } from "react-bootstrap";
-import './header.css'; // Assuming you will add custom CSS in this file
+import './header.css'; 
 
 function Header() {
   return (
-    <header>
+    <header style={{marginTop: '580px'}}>
       <Container fluid>
         <Row className="align-items-center" style={{ backgroundColor: "#FFB534" }}>
           <Col md={2} xs={3} style={{ padding: "20px" }}>

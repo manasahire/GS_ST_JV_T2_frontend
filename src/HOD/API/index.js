@@ -1,5 +1,5 @@
 export const getTotalPending = () => {
-  return fetch("put url here").then((res) => res.json());
+  return fetch("http://localhost:8082/grievance/getAllGrivance").then((res) => res.json());
 };
 
 export const getTotalResolved= () => {

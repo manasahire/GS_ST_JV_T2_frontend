@@ -119,6 +119,9 @@ function GrievanceForm() {
             pattern="[A-Za-z\s]+"
             title="Full Name should contain only letters and spaces."
           />
+          <Form.Text className="text-muted">
+           Enter full name and should not have numbers .
+          </Form.Text>
         </Form.Group>
 
         <Form.Group controlId="formEmail" className="mb-3">

@@ -1,6 +1,6 @@
 import { Routes,Route, } from "react-router-dom";
 import Dashboard from "../Pages/Dashboard";
-import TotalPending from "../Pages/TotalPending";
+import GrievanceTable from "../Pages/TotalPendingprm";
 import TotalResolved from "../Pages/TotalResolved";
 import TotalReject from "../Pages/TotalReject";
 import TotalForwarded from "../Pages/TotalForwaded";
@@ -18,17 +18,17 @@ function AppRoutesprm() {
   return (
    
     <Routes>
-      <Route path="/" element={<Dashboard />}></Route>
-      <Route path="/TotalPending" element={<TotalPending/>}></Route>
-      <Route path="/TotalResolved" element={<TotalResolved/>}></Route>
-      <Route path="/TotalReject" element={<TotalReject/>}></Route>
-      <Route path="/TotalForwarded" element={<TotalForwarded/>}></Route>
-      <Route path="/GreivanceForm" element={<GrievanceForm/>}></Route>
-      <Route path="/AllGrievences" element={<AllGrievences/>}></Route>
-      <Route path="/ResolveGrievences" element={<ResolveGrievences/>}></Route>
-      <Route path="/SearchedDate" element={<SearchedDate/>}></Route>
-      <Route path="/SearchedTalukavillage" element={<SearchedTalukavillage/>}></Route>
-      <Route path="/SearchedGrievenceid" element={< SearchedGrievenceid/>}></Route>
+      <Route path="/" Component={Dashboard }></Route>
+      <Route path="/TotalPendingprm" Component={GrievanceTable}></Route>
+      <Route path="/TotalResolvedprm" Component={TotalResolved}></Route>
+      <Route path="/TotalRejectprm" Component={TotalReject}></Route>
+      <Route path="/TotalForwardedprm" Component={TotalForwarded}></Route>
+      <Route path="/GreivanceFormprm" Component={GrievanceForm}></Route>
+      <Route path="/AllGrievencesprm" Component={AllGrievences}></Route>
+      <Route path="/ResolveGrievencesprm" Component={ResolveGrievences}></Route>
+      <Route path="/SearchedDateprm" Component={SearchedDate}></Route>
+      <Route path="/SearchedTalukavillageprm" Component={SearchedTalukavillage}></Route>
+      <Route path="/SearchedGrievenceidprm" Component={ SearchedGrievenceid}></Route>
     </Routes>
     
   );

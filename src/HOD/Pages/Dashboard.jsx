@@ -19,7 +19,7 @@ function Dashboard() {
     <Space size={20} direction="vertical" style={{ width: "100%" }}>
       
       <Typography.Title level={4} style={{ textAlign: "center" }}>
-        Dashboard
+        HOD Dashboard
       </Typography.Title>
 
       {/* Row for Dashboard Cards */}

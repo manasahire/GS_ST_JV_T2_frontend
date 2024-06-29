@@ -1,41 +1,33 @@
-import React, { useState, useEffect } from 'react';
-import { getTotalPending } from '../API/index'; // Adjust the path as necessary
-import 'bootstrap/dist/css/bootstrap.min.css';
+import React, { useEffect, useState } from 'react';
+import axios from 'axios';
 
 const GrievanceTable = () => {
   const [grievances, setGrievances] = useState([]);
-  const [loading, setLoading] = useState(true);
   const [error, setError] = useState(null);
 
+  const fetchGrievances = async () => {
+    try {
+      const response = await axios.get('http://localhost:8082/grievance/getAllGrivance');
+      setGrievances(response.data);
+      console.log("API response Data : ", response.data);
+    } catch (err) {
+      setError(err.message);
+      console.error('Error fetching grievances:', err);
+    }
+  };
   useEffect(() => {
-    const fetchData = async () => {
-      try {
-        const data = await getTotalPending();
-        setGrievances(data);
-        console.log(data)
-        setLoading(false);
-      } catch (error) {
-        setError(error);
-        setLoading(false);
-      }
-    };
-
-    fetchData();
+        fetchGrievances();
   }, []);
 
-  if (loading) {
-    return <div className="container mt-5 text-center">Loading...</div>;
-  }
-
   if (error) {
-    return <div className="container mt-5 text-center text-danger">Error: {error.message}</div>;
+    return <div>Error: {error}</div>;
   }
 
   return (
-    <div className="container mt-5">
-      <h1 className="text-center mb-4">Grievance List</h1>
-      <table className="table table-striped table-bordered">
-        <thead className="thead-dark">
+    <div>
+      <h1>Grievances</h1>
+      <table>
+        <thead>
           <tr>
             <th>Grievance ID</th>
             <th>Date</th>
@@ -68,6 +60,6 @@ const GrievanceTable = () => {
       </table>
     </div>
   );
-};
+}
 
-export default GrievanceTable;
+export default GrievanceTable;

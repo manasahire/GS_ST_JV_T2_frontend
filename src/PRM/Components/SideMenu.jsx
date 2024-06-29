@@ -91,7 +91,7 @@ function SideMenu() {
           },
           {
             label: "Greivance Form",
-            key: "/GreivanceForm",
+            key: "/Grivance",
             icon:
               <CloseCircleOutlined
                 style={{

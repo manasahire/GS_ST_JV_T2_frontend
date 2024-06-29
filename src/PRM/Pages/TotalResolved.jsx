@@ -1,17 +1,10 @@
 import {  Space, Table, Typography } from "antd";
-import { useEffect} from "react";
-import {getTotalPending } from "../API";
+// import { useEffect} from "react";
 
 function TotalResolved() {
  
   
 
-  useEffect(() => {
-    
-    getTotalPending().then((res) => {    // Assuming res is an array of data from your API
-      
-    });
-  }, []);
 
   return (
     <Space size={20} direction="vertical">
