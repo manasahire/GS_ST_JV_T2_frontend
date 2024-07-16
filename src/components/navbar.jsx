@@ -7,10 +7,19 @@ import GrievanceForm from "./GrivenceFormU";
 import LoginPage from "./loginpage";
 import home from "./home";
 import AboutUs from "./aboutus";
-import mainemp from '../EMP/mainemp'
-import mainprm from "../PRM/mainprm";
-import mainhod from "../HOD/mainhod";
-
+import mainemp from "./EMP/mainemp";
+import mainprm from "./PRM/mainprm";
+import mainhod from "./HOD/mainhod";
+import SignUpPage from "./PRM/Components/signup";
+import TotalReject from "./PRM/Pages/TotalRejectprm";
+import GrievanceTable from "./PRM/Pages/TotalPendingprm";
+import TotalResolved from "./PRM/Pages/TotalResolvedprm";
+import SearchedDate from "./PRM/Pages/ReportPage/SearchedDate";
+import ResolveGrievences from "./PRM/Pages/ReportPage/ResolveGrievences";
+import SearchedTalukavillage from "./PRM/Pages/ReportPage/SearchedTalukavillage";
+import SearchedGrievenceid from "./PRM/Pages/ReportPage/SearchedGrievenceid";
+import AllGrievances from "./PRM/Pages/ReportPage/AllGrievences";
+import TotalForwarded from "./PRM/Pages/TotalForwadedprm";
 
 function Navbar() {
   return (
@@ -77,15 +86,35 @@ function Navbar() {
             <Route path="login" Component={LoginPage}></Route>
             <Route path="aboutus" Component={AboutUs}></Route>
             <Route path="*" Component={Error}></Route>
-            {/* <Route path="mainemp" Component={mainemp}></Route>
-            <Route path="mainprm" Component={mainprm}></Route>
-            <Route path="mainhod" Component={mainhod}></Route> */}
             <Route path="mainemp/*" Component={mainemp}></Route>
             <Route path="mainprm/*" Component={mainprm}></Route>
             <Route path="mainhod/*" Component={mainhod}></Route>
-            {/* <Route path="ContactForm" Component={ContactForm}></Route> */}
-
-            
+            <Route path="signup/" Component={SignUpPage}></Route>
+            <Route
+              path="/mainprm/TotalRejectprm"
+              Component={TotalReject}
+            ></Route>
+            <Route path="/mainprm/TotalPendingprm" Component={GrievanceTable}></Route>
+            <Route path="/mainprm/TotalResolvedprm" Component={TotalResolved}></Route>
+            <Route
+              path="/mainprm/TotalForwardedprm"
+              Component={TotalForwarded }
+            ></Route>
+            <Route path="/mainprm/GreivanceFormprm" Component={GrievanceForm}></Route>
+            <Route path="/mainprm/AllGrievencesprm" Component={AllGrievances}></Route>
+            <Route
+              path="/mainprm/ResolveGrievencesprm"
+              Component={ResolveGrievences}
+            ></Route>
+            <Route path="/mainprm/SearchedDateprm" Component={SearchedDate}></Route>
+            <Route
+              path="/mainprm/SearchedTalukavillageprm"
+              Component={SearchedTalukavillage}
+            ></Route>
+            <Route
+              path="/mainprm/SearchedGrievenceidprm"
+              Component={SearchedGrievenceid}
+            ></Route>
           </Routes>
         </div>
       </Router>

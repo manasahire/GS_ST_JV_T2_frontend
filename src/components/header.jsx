@@ -4,7 +4,7 @@ import './header.css';
 
 function Header() {
   return (
-    <header style={{marginTop: '580px'}}>
+    <header >
       <Container fluid>
         <Row className="align-items-center" style={{ backgroundColor: "#FFB534" }}>
           <Col md={2} xs={3} style={{ padding: "20px" }}>

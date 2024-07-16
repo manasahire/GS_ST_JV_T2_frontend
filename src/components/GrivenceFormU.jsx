@@ -88,7 +88,7 @@ function GrievanceForm() {
 
         setTimeout(() => {
           window.location.href = "/home";
-        }, 10000);
+        }, 3000);
       } else {
         throw new Error("Failed to submit form");
       }
